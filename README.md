@@ -64,24 +64,26 @@ Para rodar o projeto, execute o seguinte comando no terminal: python src/etl_imd
 
 ## Estrutura do Projeto
 
-A estrutura de diretórios do projeto é a seguinte:
-|- automacao_etl/
-   |- .git/                  # Diretório do Git
-   |- .venv/                 # Ambiente virtual Python
-   |- data/                  # Diretório de dados
-   |- src/                   # Diretório de código-fonte
-      |- automacao-etl-imdb-ciclo-2.ipynb  # Notebook do ciclo 2
-      |- automacao-etl-imdb-ciclo-2.py     # Script Python do ciclo 2
-      |- automacao-etl-imdb-ciclo-3.py     # Script Python do ciclo 3
-      |- automacao-etl-imdb-ciclo-4.py     # Script Python do ciclo 4
-      |- automacao-etl-imdb-ciclo-5-dags.py    # DAGs do ciclo 5
-      |- automacao-etl-imdb-ciclo-5-operadores.py  # Operadores do ciclo 5
-      |- etl_imdb.py             # Script principal do processo ETL para o IMDb
-      |- imdb_data.db            # Base de dados IMDb
-   |- .gitignore             # Arquivo de configuração Git
-   |- README.md              # Documentação do projeto
-   |- requirements.txt       # Arquivo de dependências do projeto
+Abaixo está a estrutura de diretórios do projeto:
 
- ### Fim
+- `automacao_etl/`
+  - `.git/` - Diretório do Git
+  - `.venv/` - Ambiente virtual Python
+  - `data/` - Diretório de dados
+  - `src/` - Diretório de código-fonte
+    - `automacao-etl-imdb-ciclo-2.ipynb` - Notebook do ciclo 2
+    - `automacao-etl-imdb-ciclo-2.py` - Script Python do ciclo 2
+    - `automacao-etl-imdb-ciclo-3.py` - Script Python do ciclo 3
+    - `automacao-etl-imdb-ciclo-4.py` - Script Python do ciclo 4
+    - `automacao-etl-imdb-ciclo-5-dags.py` - DAGs do ciclo 5
+    - `automacao-etl-imdb-ciclo-5-operadores.py` - Operadores do ciclo 5
+    - `etl_imdb.py` - Script principal do processo ETL para o IMDb
+    - `imdb_data.db` - Base de dados IMDb
+  - `.gitignore` - Arquivo de configuração do Git
+  - `README.md` - Documentação do projeto
+  - `requirements.txt` - Arquivo de dependências do projeto
+
+
+   ### Fim
 
 
