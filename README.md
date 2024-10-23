@@ -2,9 +2,19 @@
 
 Este projeto é uma automação de processos ETL (Extract, Transform, Load) utilizando Python para manipular dados do IMDb. O pipeline automatiza a coleta de dados, transformação e carregamento para um banco de dados local.
 
+## Problema de Negócio
+
+Estamos trabalhando em uma empresa de mídia que está montando um novo squad de produto com o objetivo de melhorar as campanhas de marketing baseadas em lançamentos de filmes. Para alcançar esse objetivo, precisamos entender melhor o comportamento de consumo dos usuários de mídia e identificar as tendências de mercado.
+
+Uma das sugestões do time de produto foi explorar os dados do IMDb (Internet Movie Database), que é uma das maiores bases de dados online sobre cinema e a indústria do entretenimento. O IMDb permite que os usuários avaliem produções audiovisuais, e essas avaliações são agregadas em uma nota que reflete a opinião do público.
+
+Neste projeto, começamos sem dados disponíveis para análises, então o primeiro passo foi criar um processo de ETL para extrair, transformar e carregar os dados do IMDb. A preparação desses dados é crucial para que possamos realizar futuras análises e gerar insights que ajudem a equipe de marketing a melhorar suas campanhas.
+
 ## Descrição do Projeto
 
-O objetivo deste projeto é processar dados extraídos do IMDb, realizar transformações necessárias e carregá-los em um banco de dados SQLite. Esse processo é parte de um ciclo de automação ETL, ideal para cenários onde grandes quantidades de dados precisam ser tratadas de forma eficiente e repetitiva.
+O projeto tem como objetivo automatizar a coleta de dados de filmes do IMDb, realizar transformações necessárias (como limpeza e formatação dos dados) e carregá-los em um banco de dados local (SQLite). Isso é especialmente útil para análise de grandes volumes de dados de forma repetitiva e eficiente.
+
+Este pipeline é dividido em diferentes ciclos (ciclo 2, ciclo 3, ciclo 4 e ciclo 5), cada um representando uma etapa incremental do projeto.
 
 ## Pré-requisitos
 
@@ -62,7 +72,22 @@ Siga estes passos para configurar o projeto em sua máquina local:
 
 Para rodar o projeto, execute o seguinte comando no terminal: python src/etl_imdb.py
 
-## Estrutura do Projeto
+## Scripts ETL por Ciclo
+- `Ciclo 2:`
+ - `Script: automacao-etl-imdb-ciclo-2.py`
+ - `Função: Extrai dados do IMDb e realiza transformações iniciais, como limpeza e normalização dos dados.`
+- `Ciclo 3:`
+ - `Script: automacao-etl-imdb-ciclo-3.py`
+ - `Função: Melhora o processo de transformação com novos parâmetros e carrega os dados tratados no banco de dados.`
+- `Ciclo 4:`
+ - `Script: automacao-etl-imdb-ciclo-4.py`
+ - `Função: Realiza novas transformações e integra mais fontes de dados do IMDb.`
+- `Ciclo 5:`
+ - `Script: automacao-etl-imdb-ciclo-5-dags.py e automacao-etl-imdb-ciclo-5-operadores.py`
+ - `Função: Adiciona a execução de DAGs e operadores para orquestrar as etapas do processo ETL, utilizando uma abordagem de Airflow.`
+
+
+## Estrutura do Diretórios
 
 Abaixo está a estrutura de diretórios do projeto:
 
@@ -83,7 +108,12 @@ Abaixo está a estrutura de diretórios do projeto:
   - `README.md` - Documentação do projeto
   - `requirements.txt` - Arquivo de dependências do projeto
 
+## Resultados
+- O banco de dados resultante (imdb_data.db) contém as tabelas com as informações transformadas do IMDb.
 
-   ### Fim
+- Os dados processados podem ser consultados e analisados usando ferramentas de SQL ou bibliotecas Python como pandas.
 
+## Considerações Finais
+
+Esse projeto serve como um exemplo de automação de processos ETL com Python, aplicável a diferentes contextos onde a coleta e o tratamento de grandes volumes de dados são necessários.
 
